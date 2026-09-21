@@ -6,7 +6,7 @@ const linkedin = 'https://www.linkedin.com/in/sanketkumar-zanzmera-12589424a/'
 const github = 'https://github.com/zanzmerasanketkumar/'
 const email = 'sanketzanzmera@gmail.com'
 const phone = '+919870056961'
-const resumePath = 'file:///E:/Resume/SanketKumar_Zanzmera_Cybersecurity_SOC_Analyst_Resume%20(1).pdf'
+const resumePath = '/resume.pdf'
 
 const projects = [
     { title: 'SOC Level 1 Manual Log Investigation', domain: 'SOC · Windows Security Logs · Linux Security Logs', desc: 'Manually investigated Windows and Linux security logs to identify and review authentication-related events. Applied SOC Level 1 investigation methodology to triage log entries and assess potential security relevance.', tech: ['Windows Logs', 'Linux Logs', 'SOC L1', 'Log Analysis'], type: 'SOC' },

@@ -6,6 +6,7 @@ const linkedin = 'https://www.linkedin.com/in/sanketkumar-zanzmera-12589424a/'
 const github = 'https://github.com/zanzmerasanketkumar/'
 const email = 'sanketzanzmera@gmail.com'
 const phone = '+919870056961'
+const resumePath = 'file:///E:/Resume/SanketKumar_Zanzmera_Cybersecurity_SOC_Analyst_Resume%20(1).pdf'
 
 const projects = [
     { title: 'SOC Level 1 Manual Log Investigation', domain: 'SOC · Windows Security Logs · Linux Security Logs', desc: 'Manually investigated Windows and Linux security logs to identify and review authentication-related events. Applied SOC Level 1 investigation methodology to triage log entries and assess potential security relevance.', tech: ['Windows Logs', 'Linux Logs', 'SOC L1', 'Log Analysis'], type: 'SOC' },
@@ -53,7 +54,7 @@ function ContactForm({ sent, sending, error, setSent, setSending, setError }: { 
     </form>
 }
 
-function viewResume() { window.open("/resume.pdf", "_blank") }
+function viewResume() { window.open(resumePath, '_blank') }
 
 export default function Home() {
     const [filter, setFilter] = useState('All');
@@ -86,7 +87,7 @@ export default function Home() {
 
         <section className="section wrap githubSec"><div className="githubBox"><div><div className="eyebrow"><Icon name="github" /> GITHUB PROJECTS</div><h2>Technical work, labs & code.</h2><p>Explore public repositories and project documentation. Repository details and statistics are intentionally not fabricated.</p></div><a className="primary" href={github} target="_blank">Open GitHub <Icon name="arrow" /></a></div></section>
 
-        <section id="resume" className="section wrap resumeSection"><div className="sectionhead"><span>09</span><h2>Resume</h2></div><div className="resumeBox"><div><h3>View my professional resume</h3><p>Covering my cybersecurity/SOC profile, technical skills, projects, education, certifications, and experience.</p></div><div className="cta"><button className="primary" onClick={viewResume}>View Resume</button><a className="secondary" href="/resume.pdf" download="SanketKumar Resume.pdf">Download Resume</a></div></div></section>
+        <section id="resume" className="section wrap resumeSection"><div className="sectionhead"><span>09</span><h2>Resume</h2></div><div className="resumeBox"><div><h3>View my professional resume</h3><p>Covering my cybersecurity/SOC profile, technical skills, projects, education, certifications, and experience.</p></div><div className="cta"><button className="primary" onClick={viewResume}>View Resume</button><a className="secondary" href={resumePath} download="sanketkumar.pdf">Download Resume</a></div></div></section>
 
         <section id="contact" className="contact"><div className="wrap"><div className="sectionhead"><span>10</span><h2>Contact Me</h2></div><div className="contactgrid"><div><h3>SanketKumar Zanzmera</h3><b>Cybersecurity & SOC Analyst</b><p>Ahmedabad, Gujarat, India</p><div className="contactdetails"><a href={`mailto:${email}`}><strong>Email</strong><span>{email}</span></a><a href={`tel:${phone}`}><strong>Phone</strong><span>+91 9870056961</span></a><a href={linkedin} target="_blank"><strong>LinkedIn</strong><span>linkedin.com/in/sanketkumar-zanzmera-12589424a</span></a><a href={github} target="_blank"><strong>GitHub</strong><span>github.com/zanzmerasanketkumar</span></a></div><div className="contactlinks"><a href={`mailto:${email}`}><Icon name="mail" /> Email Me</a><a href={`tel:${phone}`}>Call Me</a><button className="secondary" onClick={viewResume}>View Resume</button></div></div><ContactForm sent={sent} sending={sending} error={error} setSent={setSent} setSending={setSending} setError={setError} /></div></div></section>
 
